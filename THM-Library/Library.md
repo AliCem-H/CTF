@@ -4,8 +4,8 @@ TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösteril
 
 1 Rustscan:
 Makineyi platform üzerinden başlattıktan sonra verilen makine IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmıştır.
-<div style="text-align:center">
-<img src="images/1-rustscan.png" alt="rustscan" width=400>
+<div style="text-align: center;">
+<img src="images/1-rustscan.png" alt="1-rustscan" width="400" >
 </div>
 2 Nmap:
 Açık olan portlar belirlendikten sonra Nmap ile portlarda çalışan servisleri, servislerin sürümlerini ve default scriptler çalıştırılarak makine hakkında daha detaylı bilgi toplanıldı.
