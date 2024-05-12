@@ -11,12 +11,13 @@ Makineyi platform üzerinden başlattıktan sonra verilen makine IP sine açık 
 Açık olan portlar belirlendikten sonra Nmap ile portlarda çalışan servisleri, servislerin sürümlerini ve default scriptler çalıştırılarak makine hakkında daha detaylı bilgi toplanıldı.
 nmap  -p 22,80 -sC -Pn -sV -T5 <Target IP address>
 
-Flag	Anlamı
--p	Sadece belirtilen portlarda tarama yapmak için kullanılır.
--sC	Portlarda çalışan servisleri için tanımlanmış Scriptleri çalıştırarak bilgi toplar.
--sV	Hedefteki servislerin sürümlerini tespit edilmesini sağlar
--Pn	Hedefe ICMP ping gönderilmemesi için kullanılır.
--T5	Tarama hızını belirler ‘5’ en hızlı seviyedir.
+| flag          | Anlamı            |
+| ------------- |:-------------:|
+|-p     | Sadece belirtilen portlarda tarama yapmak için kullanılır.|
+| -sC   | Portlarda çalışan servisleri için tanımlanmış Scriptleri çalıştırarak bilgi toplar.|
+| -sV   | Hedefteki servislerin sürümlerini tespit edilmesini sağlar |
+| -Pn   | Hedefe ICMP ping gönderilmemesi için kullanılır.|
+| -T5   | Tarama hızını belirler ‘5’ en hızlı seviyedir.|
 
 3 Dirsearch
 Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yapıldı. Dizin taraması için ‘dirsearch’ aracı kullanıldı ve aracın default wordlist kullanıldı. 
