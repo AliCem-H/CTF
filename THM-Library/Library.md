@@ -5,7 +5,7 @@ TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösteril
 1 Rustscan:
 Makineyi platform üzerinden başlattıktan sonra verilen makine IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmıştır.
 <div style="text-align: center;">
-  ![Resim Alternatif Metni](images/1-rustscan.png)
+  ![Resim Alternatif Metni](./images/1-rustscan.png)
 </div>
 
 2 Nmap:
