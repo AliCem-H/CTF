@@ -1,6 +1,6 @@
 <h1>RootMe Walktrought</h1> 
 
-<img src="https://tryhackme-images.s3.amazonaws.com/room-icons/11d59cb34397e986062eb515f4d32421.png">
+<img src="images/icon.png">
 
 TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösterilmektedir.
 Makineye <a href="https://tryhackme.com/r/room/rrootme">buradan</a> ulaşabilrisiniz
@@ -25,7 +25,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 <div style="text-align: center;">
 <img src="images/2-nmap.png" alt="1-rustscan" width="500" >
 </div>
-```
+
 <br>
 <br>
 
