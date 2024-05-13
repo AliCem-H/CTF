@@ -81,7 +81,7 @@ Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yap�
     Hangi uzantının işe yaradığını bulmak için Burpsuite açarak, dosya yükleme isteğini yakalayıp istekte bulunan dosya uzantı kısmındaki php  seçilerek, istek  intruder a gönderildi.
 <br>
     
-    <img src="images/10-extensionbypass.png" alt="3" width="600"  >
+<img src="images/10-extensionbypass.png" alt="3" width="600"  >
   
 <br>
 </p>
