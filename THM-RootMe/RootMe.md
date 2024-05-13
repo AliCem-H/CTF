@@ -13,9 +13,9 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 22 ve 80 portlarının açık olduğu görüldü.
 </p>
 <br>
-<div style="display: flex; justify-content: center;">
+
 <img src="images/1-rustscan.png" alt="1-rustscan" width="400" style="display: block; margin: 0 auto; " >
-</div>
+
 <br>
 <p> <h4>Nmap:</h4>
     Açık olan portlar belirlendikten sonra Nmap ile portlarda çalışan servisleri, servislerin sürümlerini ve default scriptler çalıştırılarak makine hakkında daha detaylı bilgi toplanıldı.
