@@ -1,5 +1,5 @@
 <h1>Pickle Rick Walktrought</h1> 
-<img src"images/icon.png">
+<img src="images/icon.png">
 
 TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösterilmektedir.
 Makineye <a href="https://tryhackme.com/r/room/picklerick">buradan</a> ulaşabilirsiniz
