@@ -10,7 +10,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 </p>
 <br>
 <div style="text-align: center;">
-<img src="images/1-rustscan.png" alt="1-rustscan" width="400" height="300" >
+<img src="images/1-rustscan.png" alt="1-rustscan" width="400" " >
 </div>
 <br>
 <p>2 Nmap:
