@@ -82,7 +82,7 @@ Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yap�
     Giriş yapıldıktan sonra açılan ekranda komut paneli ile karşılaşıldı. Komut panelinde bazı komutlar denenerek bir kısıtlamaya (validation) sahip olduğu görüldü. cat komutu engellenen komutlardan biriydi. 
 <br>
     
-    <img src="images/7-examplecommand.png" alt="3" width="300" height="300" > <img src="images/8-testCommand.png" alt="3" width="300" height="300">
+<img src="images/7-examplecommand.png" alt="3" width="300" height="300" > <img src="images/8-testCommand.png" alt="3" width="300" height="300">
   
 <br>
 </p>
