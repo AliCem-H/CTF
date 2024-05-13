@@ -6,7 +6,7 @@ TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösteril
 Makineye <a href="https://tryhackme.com/r/room/rrootme">buradan</a> ulaşabilrisiniz
 >
 <p>
-<h3>1-Enumarion</h3>
+<h3>1-Bilgi Toplama</h3>
 <h4>Rustscan:</h4>
 Makineyi platform üzerinden başlattıktan sonra verilen makine 
 IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmıştır.
