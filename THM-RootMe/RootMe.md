@@ -6,7 +6,8 @@ TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösteril
 Makineye <a href="https://tryhackme.com/r/room/rrootme">buradan</a> ulaşabilrisiniz
 >
 <p>
-<h4>1 Rustscan:</h4>
+<h3>1-Enumarion</h3>
+<h4>Rustscan:</h4>
 Makineyi platform üzerinden başlattıktan sonra verilen makine 
 IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmıştır.
 22 ve 80 portlarının açık olduğu görüldü.
@@ -16,7 +17,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 <img src="images/1-rustscan.png" alt="1-rustscan" width="400" " >
 </div>
 <br>
-<p>2 Nmap:
+<p> <h4>Nmap:</h4>
     Açık olan portlar belirlendikten sonra Nmap ile portlarda çalışan servisleri, servislerin sürümlerini ve default scriptler çalıştırılarak makine hakkında daha detaylı bilgi toplanıldı.
     <br>
 </p>
@@ -26,7 +27,6 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 <img src="images/2-nmap.png" alt="1-rustscan" width="500" >
 </div>
 
-<br>
 <br>
 
 | flag          | Anlamı            |
@@ -40,7 +40,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 
 
 <p>
-3 Dirsearch
+<h4>Dirsearch</h4>
 Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yapıldı. Dizin taraması için ‘dirsearch’ aracı kullanıldı ve aracın default wordlist kullanıldı. 
 
 <br>
@@ -51,7 +51,7 @@ Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yap�
 
 </p>
 <p>
-4  Yapılan dizin taramasında bulunan “/panel” dizini kontrol edildiğinde bir dosya yükleme sayfası olduğu görüldü. 
+Yapılan dizin taramasında bulunan “/panel” dizini kontrol edildiğinde bir dosya yükleme sayfası olduğu görüldü. 
 
 
 <br>
@@ -61,6 +61,7 @@ Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yap�
 <br>
 
 </p>
+<h3>2-File Upload</h3>
 <p>
     ilk olarak bir ReverseShell içeren bir php dosyası yüklemeye çalışıldı fakat  yükleme kısmında php uzantısına izin verilmediği görüldü
     <br>
@@ -101,7 +102,7 @@ Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yap�
 </div>
 <br>
 </p>
-
+<h3>4-Reverse Shell</h3>
 <p>
     Terminal ekranından netcat aracı ile yüklenen reverseshell deki port dinlemeye alınarak, browserdan sitedeki yüklenen dosyaya istek gönderildiğinde Shell bağlantısının gerçekleştiği görüldü.
 <br>
@@ -110,6 +111,7 @@ Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yap�
     </div>
 <br>
 </p>
+<h3>5-Birinci Bayrak</h3>
 <p>
     İlk bayrağı bulmak için çağırılan komut ile bayrağın dizini öğrenilip bayrak yakalanmıştır.
 <br>
@@ -118,7 +120,7 @@ Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yap�
     </div>
 <br>
 </p>
-
+<h3>6-Yetki Yükseltme</h3>
 <p>
     Yetki yükseltmek için çalıştırılan kod ile sahibi root olan setuid biti ayarlanmış olan dosyaları listelendi bu dosyalar araştırılarak hangisi ile root yetkisinde bir shell alınabileceği belirlendi. 
 <br>
