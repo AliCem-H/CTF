@@ -1,7 +1,10 @@
-
 <h1>RootMe Walktrought</h1> 
 
+<img src="https://tryhackme-images.s3.amazonaws.com/room-icons/11d59cb34397e986062eb515f4d32421.png">
+
 TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösterilmektedir.
+Makineye <a href="https://tryhackme.com/r/room/rrootme">buradan</a> ulaşabilrisiniz
+>
 <p>
 <h4>1 Rustscan:</h4>
 Makineyi platform üzerinden başlattıktan sonra verilen makine 
@@ -16,7 +19,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 <p>2 Nmap:
     Açık olan portlar belirlendikten sonra Nmap ile portlarda çalışan servisleri, servislerin sürümlerini ve default scriptler çalıştırılarak makine hakkında daha detaylı bilgi toplanıldı.
     <br>
-    ```nmap  -p 22,80 -sC -Pn -sV -T5  10.10.156.243```
+    `nmap  -p 22,80 -sC -Pn -sV -T5  10.10.156.243`
 
 <br>
 <div style="text-align: center;">
