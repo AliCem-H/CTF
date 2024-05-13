@@ -1,5 +1,3 @@
-``` nmap  -p 22,80 -sC -Pn -sV -T5  10.10.156.243```
-
 <h1>RootMe Walktrought</h1> 
 
 <img src="images/icon.png">
@@ -23,6 +21,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
     Açık olan portlar belirlendikten sonra Nmap ile portlarda çalışan servisleri, servislerin sürümlerini ve default scriptler çalıştırılarak makine hakkında daha detaylı bilgi toplanıldı.
     <br>
 </p>
+
 ``` nmap  -p 22,80 -sC -Pn -sV -T5  10.10.156.243```
 <br>
 <div style="text-align: center;">
@@ -122,6 +121,9 @@ Yapılan dizin taramasında bulunan “/panel” dizini kontrol edildiğinde bir
     </div>
 <br>
 </p>
+
+``` find / -type f -name user.txt 2> /dev/null```
+
 <h3>6-Yetki Yükseltme</h3>
 <p>
     Yetki yükseltmek için çalıştırılan kod ile sahibi root olan setuid biti ayarlanmış olan dosyaları listelendi bu dosyalar araştırılarak hangisi ile root yetkisinde bir shell alınabileceği belirlendi. 
@@ -132,6 +134,7 @@ Yapılan dizin taramasında bulunan “/panel” dizini kontrol edildiğinde bir
 <br>
 </p>
 
+``` find / -type f -user root -perm -u=s 2> /dev/null```
 
 <p>
     GFTOBins sitesinden belirlenen tool ile yetki yükseltmeye yaracak kodlar makinede çalıştırılarak yetki yükseltildi ve root yetkisinde bir bağlantı elde edildi. İkinci bayrak /root dizini altında bulunarak, bayrak yakalandı.
