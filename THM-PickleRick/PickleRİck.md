@@ -4,7 +4,7 @@
 TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösterilmektedir.
 Makineye <a href="https://tryhackme.com/r/room/picklerick">buradan</a> ulaşabilirsiniz
 
-<h3>1-Bilgi Toplma</h3>
+<h3>1-Bilgi Toplama</h3>
 <p>
 <h4>Rustscan:</h4>
 Makineyi platform üzerinden başlattıktan sonra verilen makine 
