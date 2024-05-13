@@ -13,7 +13,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 22 ve 80 portlarının açık olduğu görüldü.
 </p>
 <br>
-<div style="text-align: center;">
+<div style="display: flex; justify-content: center;">
 <img src="images/1-rustscan.png" alt="1-rustscan" width="400" " >
 </div>
 <br>
@@ -24,7 +24,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 
 ``` nmap  -p 22,80 -sC -Pn -sV -T5  10.10.156.243```
 <br>
-<div style="text-align: center;">
+<div style="display: flex; justify-content: center;"">
 <img src="images/2-nmap.png" alt="1-rustscan" width="500" >
 </div>
 
@@ -45,7 +45,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yapıldı. Dizin taraması için ‘dirsearch’ aracı kullanıldı ve aracın default wordlist kullanıldı. 
 
 <br>
-    <div style="text-align: center;">
+    <div style="display: flex; justify-content: center;">
     <img src="images/3-dirsearch.png" alt="3" width="450" height="350" >
     </div>
 <br>
@@ -56,7 +56,7 @@ Yapılan dizin taramasında bulunan “/panel” dizini kontrol edildiğinde bir
 
 
 <br>
-    <div style="text-align: center;">
+    <div style="display: flex; justify-content: center;">
     <img src="images/7-uploadshell.png" alt="3" width="600" height="250" >
     </div>
 <br>
@@ -66,7 +66,7 @@ Yapılan dizin taramasında bulunan “/panel” dizini kontrol edildiğinde bir
 <p>
     ilk olarak bir ReverseShell içeren bir php dosyası yüklemeye çalışıldı fakat  yükleme kısmında php uzantısına izin verilmediği görüldü
     <br>
-    <div style="text-align: center;">
+    <div style="display: flex; justify-content: center;">
     <img src="images/8-errormessage.png" alt="3" width="300" >
     </div>
 <br>
@@ -74,7 +74,7 @@ Yapılan dizin taramasında bulunan “/panel” dizini kontrol edildiğinde bir
 <p>
     Php dosyası gibi çalışan fakat uzantısı php olmayan uzantıları bulmak için yapılan aramada karşımıza çıkan sitede bazı uzantılar bulundu.
 <br>
-    <div style="text-align: center;">
+    <div style="display: flex; justify-content: center;">
     <img src="images/9-phpextensions.png" alt="3" width="500" >
     </div>
 <br>
