@@ -1,3 +1,5 @@
+``` nmap  -p 22,80 -sC -Pn -sV -T5  10.10.156.243```
+
 <h1>RootMe Walktrought</h1> 
 
 <img src="images/icon.png">
@@ -21,7 +23,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
     Açık olan portlar belirlendikten sonra Nmap ile portlarda çalışan servisleri, servislerin sürümlerini ve default scriptler çalıştırılarak makine hakkında daha detaylı bilgi toplanıldı.
     <br>
 </p>
-````bash nmap  -p 22,80 -sC -Pn -sV -T5  10.10.156.243````
+``` nmap  -p 22,80 -sC -Pn -sV -T5  10.10.156.243```
 <br>
 <div style="text-align: center;">
 <img src="images/2-nmap.png" alt="1-rustscan" width="500" >
