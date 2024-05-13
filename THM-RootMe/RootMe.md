@@ -14,7 +14,7 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 </p>
 <br>
 <div style="display: flex; justify-content: center;">
-<img src="images/1-rustscan.png" alt="1-rustscan" width="400" " >
+<img src="images/1-rustscan.png" alt="1-rustscan" width="400" style="display: block; margin: 0 auto; " >
 </div>
 <br>
 <p> <h4>Nmap:</h4>
