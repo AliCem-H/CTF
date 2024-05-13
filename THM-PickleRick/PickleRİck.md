@@ -27,8 +27,6 @@ IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmı
 <img src="images/2-nmap.png" alt="1-rustscan" width="500" height="250" >
 </div>
 <br>
-<br>
-
 </p>
 
 | flag          | Anlamı            |
