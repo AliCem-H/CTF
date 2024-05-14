@@ -24,7 +24,6 @@ Makineyi platform üzerinden başlattıktan sonra verilen makine IP sine açık 
 <img src="images/2-nmap.png" alt="1-rustscan" width="500" height="250" >
 </div>
 <br>
-<br>
 
 </p>
 
