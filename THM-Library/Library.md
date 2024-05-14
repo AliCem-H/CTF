@@ -1,9 +1,12 @@
-<meta charset="utf-8">
 <h1>The Library Walktrought</h1> 
+<img src="images/icon.png">
 
 TryHackMe platformunda yer alan bu makinenin çözüm yolu adım adım gösterilmektedir.
+Makineye <a href="https://tryhackme.com/r/room/bsidesgtlibrary">buradan</a> ulaşabilirsiniz
+
+<h3>1-Bilgi Toplama</h3>
 <p>
-<h4>1 Rustscan:</h4>
+<h4>Rustscan:</h4>
 Makineyi platform üzerinden başlattıktan sonra verilen makine IP sine açık portların keşfedilmesi için için RustScan aracı kullanılmıştır.
 </p>
 <br>
@@ -11,9 +14,10 @@ Makineyi platform üzerinden başlattıktan sonra verilen makine IP sine açık 
 <img src="images/1-rustscan.png" alt="1-rustscan" width="400" height="250" >
 </div>
 <br>
-<p>2 Nmap:
+<p><h4>Nmap:</h4>
     Açık olan portlar belirlendikten sonra Nmap ile portlarda çalışan servisleri, servislerin sürümlerini ve default scriptler çalıştırılarak makine hakkında daha detaylı bilgi toplanıldı.
-    nmap  -p 22,80 -sC -Pn -sV -T5 <Target IP address>
+
+```nmap  -p 22,80 -sC -Pn -sV -T5 <Target IP address>```
 
 <br>
 <div style="text-align: center;">
@@ -35,7 +39,7 @@ Makineyi platform üzerinden başlattıktan sonra verilen makine IP sine açık 
 
 
 <p>
-3 Dirsearch
+<h4>Dirsearch:</h4>
 Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yapıldı. Dizin taraması için ‘dirsearch’ aracı kullanıldı ve aracın default wordlist kullanıldı. 
 
 <br>
@@ -46,7 +50,7 @@ Web servisindeki gizli dizin ve dosyaları bulunması için dizin taraması yap�
 
 </p>
 <p>
-4  Yapılan dizin taramasında bulunan ‘/robots.txt dizini kontrol edildi ve txt dosyasının içinde herhangi bir dizinin gizlenmediği fakat user-agent kısmında “rockyou” olduğu görüldü. Bunun bir bruteforce ile rockyou.txt wordlistini kullanmamız gerektiğini belirten bir ipucu olduğu düşünüldü.
+Yapılan dizin taramasında bulunan ‘/robots.txt dizini kontrol edildi ve txt dosyasının içinde herhangi bir dizinin gizlenmediği fakat user-agent kısmında “rockyou” olduğu görüldü. Bunun bir bruteforce ile rockyou.txt wordlistini kullanmamız gerektiğini belirten bir ipucu olduğu düşünüldü.
 Alınan ipucunun kullanımı için bir kullanıcı adına da ihtiyaç olduğu için web site incelendiğinde bir blog yazarının adı dikkat çekti.
 
 
@@ -58,14 +62,19 @@ Alınan ipucunun kullanımı için bir kullanıcı adına da ihtiyaç olduğu i�
 
 </p>
 <p>
-    Blog yazarının kullanıcı adı ile password kısmı için rockyou.txt olacak şekilde ssh servisine bruteforce saldırısı gerçekleştirildi ve biraz bekledikten sonra kullanıcının şifresi elde edildi.
-    <br>
+<h4>Hydra:</h4>    
+Blog yazarının kullanıcı adı ile password kısmı için rockyou.txt olacak şekilde ssh servisine bruteforce saldırısı gerçekleştirildi ve biraz bekledikten sonra kullanıcının şifresi elde edildi.
+
+``` hydra -l meloidas -P /usr/share/wordlists/rockyou.txt <Target IP Address> ssh```    
+<br>
     <div style="text-align: center;">
     <img src="images/5-hydra-bruteforce.png" alt="3" width="700" >
     </div>
 <br>
 </p>
 <p>
+<h3>2-Shell</h3>
+    <h5>Birinci Bayrak</h5>
 Kullancı adı ve parola ile makineye ssh servisinden bağlantı kurulup Shell bağlantısı alındı. /home dizinindeki kullanıcı dizindeki dosyalar kontrol edildiğinde ilk bayrak elde edildi.
 <br>
     <div style="text-align: center;">
@@ -74,7 +83,7 @@ Kullancı adı ve parola ile makineye ssh servisinden bağlantı kurulup Shell b
 <br>
 
 </p>
-
+<h3>3-Yetki Yükseltme </h3>
 <p>
 Yetki yükseltmek için “sudo -l” komutu çalıştırılarak hangi araçların üst yetki ile çalıştırılabileceği listelendi. Listeleme üzerine kullanıcın dizinindeki bak.py dosyasını python ile üst yetki ile çalıştırabileceği görüldü ve dosya cat komutu ile incelendi
 <br>
@@ -84,7 +93,9 @@ Yetki yükseltmek için “sudo -l” komutu çalıştırılarak hangi araçlar�
 <br>
 </p>
 <p>
-GFTOBins sitesinden python için Shell komutu incelendi ve çalıştırılacak dosyaya komut eklelendi. 
+GFTOBins sitesinden python için Shell komutu incelendi ve çalıştırılacak dosyaya komut eklelendi.
+
+```import os; os.system("/bin/sh") ```
 <br>
     <div style="text-align:center;">
     <img src="images/8-gtfobins.png" alt="3" width="500" >
@@ -96,6 +107,7 @@ GFTOBins sitesinden python için Shell komutu incelendi ve çalıştırılacak d
 </p>
 
 <p>
+    <h5>İkinci Bayrak</h5>
 Gerekli düzenlemeler yapıldıktan sonra “sudo” komutu ile python scripti çalıştırıldığında yeni bir Shell in root kullanıcısı ile açıldığı görüldü. İkinci bayrak /root dizini altında bulundu.
 <br>
     <div style="text-align: center;">
